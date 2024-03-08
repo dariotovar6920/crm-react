@@ -9,7 +9,7 @@ const Formulario = ({cliente}) => {
                 <input 
                     id="nombre"
                     type="text"
-                    className="mt-2 block w-full p-3 bg-gray-50"
+                    className="mt-2 block w-full p-3 bg-gray-50 uppercase"
                     placeholder="Nombre del Cliente"
                     name="nombre"
                 />
@@ -22,7 +22,7 @@ const Formulario = ({cliente}) => {
                 <input 
                     id="empresa"
                     type="text"
-                    className="mt-2 block w-full p-3 bg-gray-50"
+                    className="mt-2 block w-full p-3 bg-gray-50 uppercase"
                     placeholder="Empresa del Cliente"
                     name="empresa"
                 />
@@ -65,7 +65,7 @@ const Formulario = ({cliente}) => {
                     as="textarea"
                     id="notas"
                     type="text"
-                    className="mt-2 block w-full p-3 bg-gray-50 h-40 align-self"
+                    className="mt-2 block w-full p-3 bg-gray-50 h-40 align-self uppercase"
                     placeholder="Notas del Cliente"
                     name="notas"
                 />
