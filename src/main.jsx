@@ -18,12 +18,13 @@ const router = createBrowserRouter([
         index: true,
         element: <Index />,
         loader: clientesLoader,
-       /*  errorElement: <ErrorPage /> */
+        errorElement: <ErrorPage />
       },
       {
         path: '/clientes/nuevo',
         element: <NuevoCliente />,
-        action: nuevoClienteAction
+        action: nuevoClienteAction,
+        errorElement: <ErrorPage />
       },
       {
         path: '/clientes/:clienteId/editar',
