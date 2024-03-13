@@ -4,8 +4,9 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './components/Layout'
 import NuevoCliente, {action as nuevoClienteAction} from './pages/NuevoCliente'
-import EditarCliente, {loader as editarClienteLoader} from './pages/EditarCliente'
+import EditarCliente, {loader as editarClienteLoader, action as editarClienteAction} from './pages/EditarCliente'
 import Index , {loader as clientesLoader} from './pages/Index'
+import {action as eliminarClienteAction} from './components/Cliente'
 import ErrorPage from './components/ErrorPage'
 
 //Aquí van las rutas
@@ -30,7 +31,12 @@ const router = createBrowserRouter([
         path: '/clientes/:clienteId/editar',
         element: <EditarCliente />,
         loader: editarClienteLoader,
+        action: editarClienteAction,
         errorElement: <ErrorPage />
+      },
+      {
+        path:'/clientes/:clienteId/eliminar',
+        action: eliminarClienteAction
       }
     ],
   },
